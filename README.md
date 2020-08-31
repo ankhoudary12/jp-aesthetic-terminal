@@ -1,1 +1,1 @@
-# jp_aesthetic_terminal
+# jp-aesthetic-terminal
