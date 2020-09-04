@@ -5,16 +5,6 @@ from jp_aesthetic_terminal import console
 
 
 @pytest.fixture
-def mock_requests_get(mocker):
-    mock = mocker.patch("requests.get")
-    mock.return_value.__enter__.return_value.json.return_value = {
-        "title": "Lorem Ipsum",
-        "extract": "Lorem ipsum dolor sit amet",
-    }
-    return mock
-
-
-@pytest.fixture
 def mock_fancy_print(mocker):
     mock = mocker.patch("jp_aesthetic_terminal.console.fancy_print")
     mock.return_value = True
