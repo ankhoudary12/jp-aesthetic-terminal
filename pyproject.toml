@@ -13,6 +13,9 @@ keywords = ["japenese","aesthetic"]
 python = "^3.7"
 click = "^7.1.2"
 requests = "^2.24.0"
+flake8-bandit = "^2.1.2"
+flake8-black = "^0.2.1"
+flake8-import-order = "^0.18.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.3"

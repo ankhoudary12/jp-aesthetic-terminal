@@ -2,7 +2,6 @@ import random
 from time import sleep
 
 import click
-import requests
 
 from . import __version__, wikipedia
 
