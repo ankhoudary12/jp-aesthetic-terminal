@@ -1,3 +1,4 @@
+"""Command-line interface"""
 import random
 from time import sleep
 
@@ -5,12 +6,10 @@ import click
 
 from . import __version__, wikipedia
 
-API_URL = "https://ja.wikipedia.org/api/rest_v1/page/random/summary"
 
+def fancy_print(line: str, title: bool = False):
 
-def fancy_print(line, title=False):
-
-    color = "32"
+    color: str = "32"
 
     if title:
         color = "36"
@@ -24,14 +23,14 @@ def fancy_print(line, title=False):
 @click.option("-i", "--iterations", default=50)
 @click.option("-s", "--time_to_sleep", default=2)
 @click.version_option(version=__version__)
-def main(iterations, time_to_sleep):
+def main(iterations: int, time_to_sleep: int) -> None:
     """The premier Japanese aesthetic terminal!!!"""
 
-    for i in range(iterations):
-        data = wikipedia.random_page()
+    for _i in range(iterations):
+        page = wikipedia.random_page()
 
-        title = data["title"]
-        extract = data["extract"]
+        title = page.title
+        extract = page.extract
         extract = extract.split("、")
 
         fancy_print(title, title=True)
