@@ -34,6 +34,7 @@ typeguard = "^2.9.1"
 flake8-docstrings = "^1.5.0"
 darglint = "^1.5.4"
 sphinx = "^3.2.1"
+sphinx-autodoc-typehints = "^1.11.0"
 
 [tool.poetry.scripts]
 jp-aesthetic-terminal = "jp_aesthetic_terminal.console:main"

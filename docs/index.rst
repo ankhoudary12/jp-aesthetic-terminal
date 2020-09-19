@@ -1,6 +1,13 @@
 Japanese Aesthetic Terminal
 ==============================
 
+.. toctree::
+    :hidden:
+    :maxdepth: 1
+
+    license
+    reference
+
 A command-line interface prints random facts to your console in Japanese text,
 using the `Wikipedia API <https://ja.wikipedia.org/api/rest_v1/#/>`_.
 
@@ -25,14 +32,17 @@ Hypermodern Python's usage looks like:
 
 .. code-block:: console
 
-   $ hypermodern-python [OPTIONS]
+   $ jp-aesthetic-terminal [OPTIONS]
 
-.. option:: -l <language>, --language <language>
+.. option:: -i <iterations>, --iterations <iterations>
 
-   The Wikipedia language edition,
-   as identified by its subdomain on
-   `wikipedia.org <https://www.wikipedia.org/>`_.
-   By default, the English Wikipedia is selected.
+   How many random pages to be printed before closing.
+   Because this is meant to continuously run in the background for a while,
+   the default value is 50.
+
+.. option:: -s <time_to_sleep>, --time_to_sleep <time_to_sleep>
+
+  How long to wait before making each API call (in seconds), default is 2 seconds
 
 .. option:: --version
 
