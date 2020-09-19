@@ -1,4 +1,4 @@
-"""Wikipedia REST API client"""
+"""Wikipedia REST API client."""
 from dataclasses import dataclass
 
 import click
@@ -9,7 +9,7 @@ import requests
 
 @dataclass
 class Page:
-    """Page resource
+    """Page resource.
 
     Attributes:
         title: The title of the Wikipedia page
@@ -28,8 +28,7 @@ API_URL: str = "https://ja.wikipedia.org/api/rest_v1/page/random/summary"
 
 
 def random_page() -> Page:
-
-    """Return a random page in the Japanese Language
+    """Return a random page in the Japanese Language.
 
     Performs a GET request to the JA page/random/summary endpoint
 
@@ -40,7 +39,6 @@ def random_page() -> Page:
         ClickException: The HTTP request fails or HTTP response contains an invalid body
 
     """
-
     try:
         with requests.get(API_URL) as response:
             response.raise_for_status()

@@ -1,3 +1,4 @@
+"""Testing for wikipedia.py!"""
 from unittest.mock import Mock
 
 import click
@@ -7,6 +8,7 @@ from jp_aesthetic_terminal import wikipedia
 
 
 def test_random_page_uses_ja_language(mock_requests_get: Mock) -> None:
+    """It calls the Japanese page."""
     wikipedia.random_page()
     args, _ = mock_requests_get.call_args
     assert "ja.wikipedia.org" in args[0]
@@ -21,5 +23,6 @@ def test_random_page_uses_ja_language(mock_requests_get: Mock) -> None:
 
 
 def test_random_page_returns_page(mock_requests_get: Mock) -> None:
+    """Random page returns page class."""
     page = wikipedia.random_page()
     assert isinstance(page, wikipedia.Page)

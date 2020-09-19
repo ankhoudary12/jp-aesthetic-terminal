@@ -1,1 +1,1 @@
-"""Testing Suite for jp-aesthetic-terminal"""
+"""Testing Suite for jp-aesthetic-terminal."""

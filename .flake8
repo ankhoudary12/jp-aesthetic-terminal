@@ -1,12 +1,12 @@
 [flake8]
-select = ANN,B,BLK,C,E,F,I,S,W
+select = ANN,B,BLK,C,D,DAR,E,F,I,S,W
 ignore = E203,E501,W503
 max_line_length = 88
 max-complexity = 10
+docstring-convention = google
 
 application-import-names = jp_aesthetic_terminal, tests
 import-order-style = google
 
 per-file-ignores =
   tests/*:S101
-      
