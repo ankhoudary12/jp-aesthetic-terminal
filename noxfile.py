@@ -6,7 +6,7 @@ from typing import Any
 import nox
 from nox.sessions import Session
 
-locations = "src", "tests", "noxfile.py"
+locations = "src", "tests", "noxfile.py", "docs/conf.py"
 
 nox.options.sessions = "lint", "tests", "safety", "mypy"
 
@@ -94,3 +94,10 @@ def typeguard(session: Session) -> None:
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "pytest", "pytest-mock", "typeguard")
     session.run("pytest", f"--typeguard-packages={package}", *args)
+
+
+@nox.session(python="3.8")
+def docs(session: Session) -> None:
+    """Build documentation."""
+    install_with_constraints(session, "sphinx")
+    session.run("sphinx-build", "docs", "docs/build")
