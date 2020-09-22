@@ -3,7 +3,7 @@ import click.testing
 from click.testing import CliRunner
 import pytest
 from pytest_mock import MockFixture
-from unitest.mock import Mock
+from unittest.mock import Mock
 
 
 from jp_aesthetic_terminal import console
