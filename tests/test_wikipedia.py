@@ -1,8 +1,8 @@
 """Testing for wikipedia.py!"""
 from unittest.mock import Mock
 
-import click
-import pytest
+# import click
+# import pytest
 
 from jp_aesthetic_terminal import wikipedia
 

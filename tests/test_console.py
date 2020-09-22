@@ -1,9 +1,10 @@
 """Test suite for console.py!"""
+from unittest.mock import Mock
+
 import click.testing
 from click.testing import CliRunner
 import pytest
 from pytest_mock import MockFixture
-from unittest.mock import Mock
 
 
 from jp_aesthetic_terminal import console
