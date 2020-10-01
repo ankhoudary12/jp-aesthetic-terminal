@@ -7,6 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/ankhoudary12/jp-aesthetic-terminal"
 repository = "https://github.com/ankhoudary12/jp-aesthetic-terminal"
+documentation = "https://jp-aesthetic-terminal.readthedocs.io"
 keywords = ["japenese","aesthetic"]
 
 [tool.poetry.dependencies]
